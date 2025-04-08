@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- user defined beans property calling setter-->
+    <bean id="professor1" class="console.spring.core.Professor">
+        <property name="professorId" value="678" />
+        <property name="professorName" value="Vinayak" />
+        <property name="professorDepartment" value="CSE" />
+        <property name="professorExperience" value="12" />
+    </bean>
+    <bean id="professor2" class="console.spring.core.Professor">
+        <property name="professorId" value="456" />
+        <property name="professorName" value="Vikas" />
+        <property name="professorDepartment" value="ISE" />
+        <property name="professorExperience" value="8" />
+    </bean>
+    <bean id="professor3" class="console.spring.core.Professor">
+        <property name="professorId" value="456" />
+        <property name="professorName" value="Mukthar" />
+        <property name="professorDepartment" value="ECE" />
+        <property name="professorExperience" value="9" />
+    </bean>
+    <bean id="professor4" class="console.spring.core.Professor">
+        <property name="professorId" value="456" />
+        <property name="professorName" value="Mahadev" />
+        <property name="professorDepartment" value="EEE" />
+        <property name="professorExperience" value="2" />
+    </bean>
+
+    <bean id="academic" class="console.spring.core.ProfessorList">
+        <!-- setter -->
+        <property name="active">
+            <list>
+                <ref bean = "professor1"/>
+                <ref bean = "professor2"/>
+                <ref bean = "professor3"/>
+                <ref bean = "professor4"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
