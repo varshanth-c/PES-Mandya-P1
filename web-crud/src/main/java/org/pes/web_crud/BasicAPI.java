@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/basic")
 public class BasicAPI {
     // @GetMapping("/")
     @RequestMapping(value="/", method = RequestMethod.GET)
